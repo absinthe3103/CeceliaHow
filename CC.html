@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPP X HostAStay | The Marq International</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Using a very light gray for the body background to provide subtle contrast */
+            background-color: #f8f8f8;
+            color: #333; /* Dark gray for main text */
+        }
+        .section-heading {
+            font-weight: 600;
+            color: #1a1a1a; /* Darker text for headings */
+        }
+        .btn-primary {
+            background-color: #1a1a1a; /* Dark button background */
+            color: #ffffff; /* White text on dark button */
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #555555; /* Lighter dark on hover */
+        }
+        .nav-link {
+            color: #333; /* Dark text for nav links */
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #000; /* Black on hover */
+        }
+        /* Custom scroll-to-top button styling */
+        #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* 20px from the bottom */
+            right: 20px; /* 20px from the right */
+            z-index: 99; /* Ensure it's above other content */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: #1a1a1a; /* Dark background */
+            color: white; /* White text */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 50%; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+
+        #scrollToTopBtn:hover {
+            background-color: #555555; /* Darker on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-10 sticky top-0 z-50 relative"> <!-- Added 'relative' here -->
+        <div class="container mx-auto flex justify-between items-center flex-wrap">
+            <!-- Logo/Company Name -->
+            <a href="#home" class="text-2xl font-bold text-gray-800 tracking-tight">
+                BPP X HostAStay
+            </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <!-- Navigation Menu -->
+            <!-- Modified classes for mobile menu positioning -->
+            <nav id="main-nav" class="hidden md:flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 w-full md:w-auto
+                                       md:static md:bg-transparent md:shadow-none md:p-0
+                                       absolute top-full left-0 bg-white shadow-md p-4">
+                <a href="#home" class="nav-link block py-2 md:py-0 text-gray-700 hover:text-black font-medium rounded-md">Home</a>
+                <a href="#about" class="nav-link block py-2 md:py-0 text-gray-700 hover:text-black font-medium rounded-md">About Us</a>
+                <a href="#services" class="nav-link block py-2 md:py-0 text-gray-700 hover:text-black font-medium rounded-md">Services</a>
+                <a href="#portfolio" class="nav-link block py-2 md:py-0 text-gray-700 hover:text-black font-medium rounded-md">Portfolio</a>
+                <a href="#benefits" class="nav-link block py-2 md:py-0 text-gray-700 hover:text-black font-medium rounded-md">Benefits</a>
+                <a href="#contact" class="nav-link block py-2 md:py-0 text-gray-700 hover:text-black font-medium rounded-md">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gray-100 min-h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10 py-16 md:py-0"> <!-- Added vertical padding for smaller screens -->
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                Your Hassle-Free Property Investment Solution
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
+                We sell, we manage, ensuring investors enjoy a hassle-free solution and returns up to 6-12% ROI.
+            </p>
+            <a href="#portfolio" class="btn-primary inline-block px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                Explore Investment Opportunities
+            </a>
+        </div>
+        <!-- Placeholder for hero image - replace with actual image -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://placehold.co/1920x1080/e0e0e0/ffffff?text=Modern+Building');"></div>
+    </section>
+
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-heading text-3xl md:text-4xl text-center mb-12">About Us</h2>
+
+
+            <div class="grid md:grid-cols-1 gap-12 items-center">
+                <!-- Our Vision & Mission -->
+                <div class="text-center max-w-3xl mx-auto"> <!-- Added text-center and max-w-3xl mx-auto -->
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Vision & Mission</h3>
+                    <p class="text-gray-700 mb-4">
+                        It is our responsibility to make sure our investors/purchasers obtain 6-12% ROI. We provide a hassle-free solution to our investors/purchasers.
+                    </p>
+                    <p class="text-gray-700">
+                        We hope to provide a property investment platform to generate not only ROI but also making sure the property value added for future selling.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="mt-16 md:mt-24 text-center max-w-4xl mx-auto">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Message from Our Founder</h3>
+                <p class="text-gray-700 italic mb-6">
+                    "I have been in real estate for my past 13 years. I sighted the market crash in 2008 and the properties at that moment was a good timing to invest. However, this crash of market is again happening due to the pandemic. This is my first time seeing property market at such reduction. It became the great opportunity for me to handpick high ROI projects to benefit our group of investors."
+                </p>
+                <p class="text-gray-800 font-bold text-xl">
+                    "IF YOU ASK ME, WHEN IS THE GOOD TIME TO INVEST, I WOULD ANSWER: NOW WITH HANDPICK QUALITY PROJECTS."
+                </p>
+                <p class="text-gray-600 mt-4">- The Founder, BPP X HostAStay</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-heading text-3xl md:text-4xl text-center mb-12">Our Services</h2>
+
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card: Property Management -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Property Management</h3>
+                    <p class="text-gray-700 mb-3">
+                        We provide after-sales management, maintaining your property throughout your investment to ensure the best ROI.
+                    </p>
+                    <p class="text-gray-600 text-sm">
+                        Includes regular reports and short-stay management with system support.
+                    </p>
+                </div>
+                <!-- Service Card: Property Consulting -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Property Consulting</h3>
+                    <p class="text-gray-700 mb-3">
+                        Beyond purchasing, we offer current market reports and advise on selling for profit once your capital gain is achieved.
+                    </p>
+                </div>
+                <!-- Service Card: Deal Making -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Deal Making</h3>
+                    <p class="text-gray-700 mb-3">
+                        It's our responsibility to secure the best deals for you by handpicking prime projects for investment.
+                    </p>
+                </div>
+                <!-- Service Card: Building Requirements & Design -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Building Requirements & Design</h3>
+                    <p class="text-gray-700 mb-3">
+                        We focus on commercial-titled buildings suitable for short-stay schemes in prime locations with excellent interior design.
+                    </p>
+                    <p class="text-gray-600 text-sm">
+                        Concierge service is required, and we offer market-surveyed interior design selections.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-heading text-3xl md:text-4xl text-center mb-12">Our Portfolio & Projects</h2>
+
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Project Card: Ceylon Hill -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Ceylon Hill by Pavilion Group</h3>
+                    <img src="https://raw.githubusercontent.com/absinthe3103/CeceliaHow/refs/heads/main/image/CeylonHill.jpg" alt="Ceylon Hill Project" class="w-full h-48 object-cover rounded-md mb-4">
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Deposit: RM10,000/unit</li>
+                        <li>Example Unit Price: RM1,825,000 (23% discount, fully furnished with ID & GRR for a year)</li>
+                        <li>Nett Price: RM1,405,250</li>
+                        <li>Potential Agency Commission (Bulk Purchase): 8% (RM112,240, extra RM27,925)</li>
+                        <li>ROI Estimation: RM18,000 (sold within 6+3 months), RM15,000 (not sold within 6+3 months)</li>
+                    </ul>
+                </div>
+                <!-- Project Card: Twin Pines -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Twin Pines @ Genting by Tropicana Group</h3>
+                    <img src="https://raw.githubusercontent.com/absinthe3103/CeceliaHow/refs/heads/main/image/TwinPines.jpg" alt="Twin Pines Project" class="w-full h-48 object-cover rounded-md mb-4">
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Deposit: RM5,000/unit</li>
+                        <li>Example Unit Price: RM689,000 (8% + 1% discount, fully furnished with ID)</li>
+                        <li>Nett Price: RM627,540</li>
+                        <li>Potential Agency Commission (Bulk Purchase): 8% (RM50,203, extra RM28,826)</li>
+                        <li>ROI Estimation: RM18,000 (sold within 6+3 months), RM15,000 (not sold within 6+3 months)</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="mt-12 text-center">
+                <p class="text-xl font-semibold text-gray-800 mb-4">Our Company Focus:</p>
+                <ul class="list-disc list-inside text-gray-700 max-w-2xl mx-auto text-left space-y-2">
+                    <li>Handpicking 6-12% ROI property in the market by negotiating below market deals for prime projects.</li>
+                    <li>Managing the property and generating hassle-free and best returns in the market.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Client Benefits Section -->
+    <section id="benefits" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-heading text-3xl md:text-4xl text-center mb-12">Client Benefits</h2>
+
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-lg font-medium text-gray-800">Buy property below the market rate</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-lg font-medium text-gray-800">Potential cash-out opportunity</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-lg font-medium text-gray-800">Hassle-free property management</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-lg font-medium text-gray-800">ROI 6-12%</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-lg font-medium text-gray-800">3-5 years exit plan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-heading text-3xl md:text-4xl text-center mb-12">Contact Us</h2>
+
+
+            <div class="grid md:grid-cols-1 gap-12 items-start">
+                <!-- Contact Information -->
+                <div class="max-w-2xl mx-auto text-center">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Get in Touch</h3>
+                    <p class="text-gray-700 mb-2">
+                        <span class="font-medium">Cecelia How,</span> PEA 2889, Probationary Estate Agent
+                    </p>
+                    <address class="not-italic text-gray-700 mb-2">
+                        <span class="font-medium">Address:</span> Block J-02-11, No.2 Jalan Solaris,<br> Solaris Mont Kiara, 50480, Kuala Lumpur, Malaysia
+                    </address>
+                    <p class="text-gray-700 mb-2">
+                        <span class="font-medium">Office Phone:</span> +603-6211 9008
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        <span class="font-medium">Mobile Phone:</span> +6019-590 3439
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        <span class="font-medium">Email:</span> <a href="mailto:cece3934@gmail.com" class="text-blue-600 hover:underline">cece3934@gmail.com</a>
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        <span class="font-medium">The Marq Website:</span> <a href="https://themarq.my" target="_blank" class="text-blue-600 hover:underline">https://themarq.my</a>
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        <span class="font-medium">Company:</span> THE MARQ INTERNATIONAL SDN BHD
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        <span class="font-medium">BPP Realty Facebook:</span> <a href="https://www.facebook.com/bpprealty" target="_blank" class="text-blue-600 hover:underline">HTTPS://WWW.FACEBOOK.COM/BPPREALTY</a>
+                    </p>
+
+
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Welcome To Join Us</h3>
+                    <p class="text-gray-700 mb-4">
+                        We are here not only providing reports, solutions but also making your return achieve 6-12% ROI.
+                    </p>
+                    <p class="text-gray-700">
+                        We are providing a full solution on investing in properties.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-8 px-6 md:px-10">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">&copy; 2022 BPP X HostAStay | The Marq International Sdn Bhd. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+                <a href="https://www.facebook.com/bpprealty" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">Top</button>
+
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mainNav = document.getElementById('main-nav');
+
+
+        mobileMenuButton.addEventListener('click', () => {
+            mainNav.classList.toggle('hidden');
+            // When showing, ensure it's positioned correctly for mobile
+            if (!mainNav.classList.contains('hidden')) {
+                mainNav.classList.add('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-white', 'shadow-md', 'p-4');
+                mainNav.classList.remove('md:flex', 'md:flex-row', 'md:space-x-8', 'md:mt-0', 'md:w-auto', 'md:static', 'md:bg-transparent', 'md:shadow-none', 'md:p-0');
+            } else {
+                // When hiding, revert to desktop classes for next resize
+                mainNav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-white', 'shadow-md', 'p-4');
+                mainNav.classList.add('md:flex', 'md:flex-row', 'md:space-x-8', 'md:mt-0', 'md:w-auto', 'md:static', 'md:bg-transparent', 'md:shadow-none', 'md:p-0');
+            }
+        });
+
+
+        // Close mobile menu when a nav link is clicked
+        document.querySelectorAll('#main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) { // Only close if on mobile
+                    mainNav.classList.add('hidden');
+                    mainNav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-white', 'shadow-md', 'p-4');
+                    mainNav.classList.add('md:flex', 'md:flex-row', 'md:space-x-8', 'md:mt-0', 'md:w-auto', 'md:static', 'md:bg-transparent', 'md:shadow-none', 'md:p-0');
+                }
+            });
+        });
+    
